@@ -12,16 +12,37 @@
     <div class="container">
         <div id="loginForm">
             <form>
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" placeholder="Enter Username" name="uname" required>
+                <label for="uname"><b>Username</b></label>
+                <input type="text" class="form" placeholder="Enter Username" name="uname" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="text" class="form" placeholder="Enter Password" name="psw" required>
+            
+                <button type="submit">Login</button>
+                Not already a member? 
                 
-                    <label for="psw"><b>Password</b></label>
-                    <input type="text" placeholder="Enter Password" name="psw" required>
-                
-                    <button type="submit">Login</button>
-                    <label>
-                    <input type="checkbox" checked="checked" name="remember"> Remember me
-                    </label>
+                <!-- Trigger/Open the Modal -->
+                <button onclick="document.getElementById('registerModal').style.display='block'"
+                class="w3-button">Register here!</button>
+
+                <!-- The Modal -->
+                <div id="registerModal" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                    <span onclick="document.getElementById('registerModal').style.display='none'" 
+                    class="w3-button w3-display-topright">&times;</span>
+                    <p>Some text in the Modal..</p>
+                    <p>Some text in the Modal..</p>
+                    </div>
+                </div>
+                </div>
+
+                </div>
+                </div>
+
+
+
+
                 </form>
         </div>
       </div>

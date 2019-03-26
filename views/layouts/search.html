@@ -4,28 +4,25 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
-
-
     <link rel="stylesheet" type="text/css" href="../../assets/style.css">
 </head>
 <body>
     
     <div class="container">
-        <form action="action_page.php">
-
-            <label for="Studio">Type of Studio</label>
-            <select id="Studio" name="Studio">
+        <form>
+            <select id="studioSearch" class="form" name="Studio">
+                <option value="studiotype">Select Studio Type</option>
                 <option value="art">Art</option>
                 <option value="photography">Photography</option>
                 <option value="welding">Welding</option>
             </select>
     
     
-          <label for="lname">City</label>
-          <input type="text" id="lname" name="lastname" placeholder="Example@email.com">
+
+          <input type="text" id="citySearch" class="form" placeholder="City">
       
-          <label for="Studio">State</label>
-          <select id="state" class="inputField">
+
+          <select id="stateSearch" class="form">
                 <option>State</option>
                 <option>AL</option><option>AK</option><option>AZ</option><option>AR</option> <option>CA</option><option>CO</option>
                 <option>CT</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option>
@@ -38,8 +35,7 @@
                 <option>WI</option><option>WY</option>
             </select>
     
-          <label for="lname">Zip Code</label>
-          <input type="text" id="lname" name="lastname" placeholder="Example@email.com">
+          <input type="text" id="zipSearch" class="form" placeholder="Zip Code">
     
           <br><strong>Must add google calendar? for dates?</strong>
       

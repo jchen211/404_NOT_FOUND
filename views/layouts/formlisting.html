@@ -10,36 +10,35 @@
 <body>
     
     <div class="container">
+        <h1>List a Space!</h1>
         <div id="listingForm">
             <form>
             
-                <label for="fname">First Name</label>
-                <input type="text" id="firstName" placeholder="Your name..">
+                <input type="text" id="firstNameList" class="form" placeholder="First Name">
             
-                <label for="lname">Last Name</label>
-                <input type="text" id="lastName" placeholder="Your last name..">
+                <input type="text" id="lastNameList" class="form" placeholder="Last Name">
+            <br>
+                
+                <input type="text" id="eMailList" class="form" placeholder="Email Address">
 
-                <label for="lname">Email</label>
-                <input type="text" id="eMail" placeholder="Example@email.com">
-
-                <label for="lname">Phone Number</label>
-                <input type="text" id="phone" placeholder="(123) 456 - 7890">
-
-                <label for="Studio">Type of Studio</label>
-                <select id="StudioType" name="Studio">
+               
+                <input type="text" id="phoneList" class = "form" placeholder="Phone Number">
+            <br>
+                <select id="studioTypeList" class="form" name="Studio" >
+                <option>Type of Studio</option>
                 <option value="art">Art</option>
                 <option value="photography">Photography</option>
                 <option value="welding">Welding</option>
                 </select>
-
-                <label for="Street">Street Address</label>
-                <input type="text" id="streetAddress" placeholder="Street Address">
-
-                <label for="lname">City</label>
-                <input type="text" id="cityName" placeholder="City">
+            <br>
+        
+                <input type="text" id="streetAddressList" class="form" placeholder="Street Address">
+            <br>
+              
+                <input type="text" id="cityList" class="form" placeholder="City">
             
-                <label for="Studio">State</label>
-                <select id="state" class="inputField">
+
+                <select id="stateList" class="form">
                       <option>State</option>
                       <option>AL</option><option>AK</option><option>AZ</option><option>AR</option> <option>CA</option><option>CO</option>
                       <option>CT</option><option>DE</option><option>FL</option><option>GA</option><option>HI</option><option>ID</option>
@@ -52,12 +51,9 @@
                       <option>WI</option><option>WY</option>
                   </select>
 
-                <label for="lname">Zip Code</label>
-                <input type="text" id="Zip" name="lastname" placeholder="Example@email.com">
-
-                <label for="subject">Type of equiptment/amenitites </label>
+                <input type="text" id="zipList" class="form" placeholder="Zip Code">
                 <br>
-                <textarea type="text" id="description" name="equiptment" placeholder="Please provide a description of your studio here"></textarea>
+                <textarea type="text" id="descriptionList" class="form" name="equiptment" placeholder="Please provide a description of your studio here"></textarea>
 
                 <br><strong>Must add google calendar? for dates?</strong>
             
