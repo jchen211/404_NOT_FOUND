@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
   var Property = sequelize.define("Property", {
     propertyType: DataTypes.STRING,
-    propertyAddNum: DataTypes.INT,
+    propertyAddNum: DataTypes.INTEGER,
     propertyAddStreet: DataTypes.STRING,
     propertyAddCity: DataTypes.STRING,
     propertyAddSate: DataTypes.STRING,
-    propertyAddZIP: DataTypes.INT,
+    propertyAddZIP: DataTypes.INTEGER,
   });
 
   Property.associate = function(models) {

@@ -3,9 +3,9 @@ module.exports = function (sequelize, DataTypes) {
     // Data will be pulled in from DOM
     userName: DataTypes.STRING,
     userPassword: DataTypes.STRING,
-    userPhone: DataTypes.INT,
+    userPhone: DataTypes.INTEGER,
     userEmail: DataTypes.STRING,
-    userCC: DataTypes.INT,
+    userCC: DataTypes.INTEGER,
   });
 
   User.associate = function (models) {
