@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS createHeredb;
-CREATE DATABASE createHeredb;
-USE createHeredb;
+DROP DATABASE IF EXISTS hdnkq3sjie33avyb;
+CREATE DATABASE hdnkq3sjie33avyb;
+USE hdnkq3sjie33avyb;
 
 CREATE TABLE userInfo (
   userID INT NOT NULL,
