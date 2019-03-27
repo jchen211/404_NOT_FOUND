@@ -1,10 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "password",
-    "database": "404db",
-    "host": "127.0.0.1",
-    "port": 3306,
+    "username": "i7xrx4z3k66gttjjt",
+    "password": "l6jdziyauhdeqp3w",
+    "database": "hdnkq3sjie33avyb",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
