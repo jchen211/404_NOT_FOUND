@@ -31,43 +31,43 @@
 
                 <label for="psw"><b>Password</b></label>
                 <input type="text" class="form" placeholder="Enter Password" id="psw" required>
+            </form>
+            <br><button id="loginButton" type="button">Login</button>
+            Not a member?
 
-                <br><button id="loginButton" type="button">Login</button>
-                Not a member?
+            <!-- Trigger/Open the Modal -->
+            <button onclick="document.getElementById('registerModal').style.display='block'" class="w3-button">Register
+                here!</button>
 
-                <!-- Trigger/Open the Modal -->
-                <button onclick="document.getElementById('registerModal').style.display='block'"
-                    class="w3-button">Register here!</button>
+            <!-- The Modal -->
+            <div id="registerModal" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('registerModal').style.display='none'"
+                            class="w3-button w3-display-topright">&times;</span>
+                        <form>
+                            <label for="uname"><b>Username</b></label>
+                            <input type="text" class="form" placeholder="Enter Username" id="uname" required>
 
-                <!-- The Modal -->
-                <div id="registerModal" class="w3-modal">
-                    <div class="w3-modal-content">
-                        <div class="w3-container">
-                            <span onclick="document.getElementById('registerModal').style.display='none'"
-                                class="w3-button w3-display-topright">&times;</span>
-                            <form>
-                                <label for="uname"><b>Username</b></label>
-                                <input type="text" class="form" placeholder="Enter Username" id="uname" required>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="text" class="form" placeholder="Enter Password" id="psw" required>
 
-                                <label for="psw"><b>Password</b></label>
-                                <input type="text" class="form" placeholder="Enter Password" id="psw" required>
-                            
-                                <label for="phone"><b>Phone Number</b></label>
-                                <input type="text" class="form" placeholder="Enter Phone Number" id="phone" required>
+                            <label for="phone"><b>Phone Number</b></label>
+                            <input type="text" class="form" placeholder="Enter Phone Number" id="phone" required>
 
-                                <label for="email"><b>Enter Email</b></label>
-                                <input type="text" class="form" placeholder="Enter Email" id="email" required>
+                            <label for="email"><b>Enter Email</b></label>
+                            <input type="text" class="form" placeholder="Enter Email" id="email" required>
 
-                                <label for="cc"><b>Credit Card</b></label>
-                                <input type="text" class="form" placeholder="Enter Credit Card #" id="cc" required>
-                                <button onclick="document.getElementById('registerModal').style.display='block'"
+                            <label for="cc"><b>Credit Card</b></label>
+                            <input type="text" class="form" placeholder="Enter Credit Card #" id="cc" required>
+                            <button onclick="document.getElementById('registerModal').style.display='block'"
                                 class="w3-button" id="registerUser">Register!</button>
-            
-            
-                            </form>
-                        </div>
+
+
+                        </form>
                     </div>
                 </div>
+            </div>
 
         </div>
     </div>
@@ -75,7 +75,7 @@
 
 
 
-    </form>
+
     </div>
     </div>
 
