@@ -7,15 +7,17 @@ $(document).ready(function () {
   var userCC = $("#cc");
   // Adding event listeners to the form to create a new object, and the button to delete
   // an user
-  $(document).on("submit", "#registerModal", registerUser);
+  $(document).on("click", "#registerUser", registerUser);
 
   // A function to handle what happens when the form is submitted to create a new user
   function registerUser(event) {
+
     event.preventDefault();
     // Don't do anything if the name fields hasn't been filled out
     if (!userName.val().trim().trim()) {
       return;
     }
+      console.log("I am here");
     // Calling the newUser function and passing in the value of the name input
     newUser({
       userName: userName.val().trim(),
