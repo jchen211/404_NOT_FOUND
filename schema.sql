@@ -6,7 +6,7 @@ CREATE TABLE userInfo (
   userID INT NOT NULL,
   userName VARCHAR(100) NULL,
   userPassword VARCHAR(100) NULL,
-  userPhone INT NULL,
+  userPhone VARCHAR(10) NULL,
   userEmail VARCHAR(100) NULL,
   userCC INT NULL,
   PRIMARY KEY (userID)
