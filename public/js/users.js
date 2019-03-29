@@ -11,11 +11,14 @@ $(document).ready(function() {
 
   // A function to handle what happens when the form is submitted to create a new user
   function registerUser(event) {
-    console.log("here");
-
     event.preventDefault();
     // Don't do anything if the name fields hasn't been filled out
-    if (!userName.val().trim().trim()) {
+    if (
+      !userName
+        .val()
+        .trim()
+        .trim()
+    ) {
       return;
     }
     // Calling the newUser function and passing in the value of the name input
@@ -31,5 +34,6 @@ $(document).ready(function() {
   // A function for creating an user. Calls getusers upon completion
   function newUser(userInfo) {
     $.post("/api/users", userInfo);
+    // console.log("Registered");
   }
 });
