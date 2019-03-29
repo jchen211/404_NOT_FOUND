@@ -3,8 +3,8 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all propertys
   app.get("/api/propertys", function(req, res) {
-    db.Property.findAll({}).then(function(dbPropertys) {
-      res.json(dbPropertys);
+    db.Property.findAll({}).then(function(userProperty) {
+      res.json(userProperty);
     });
   });
 
@@ -29,8 +29,8 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(dbPropertys) {
-      res.json(dbPropertys);
+    }).then(function(userProperty) {
+      res.json(userProperty);
     });
   });
 };

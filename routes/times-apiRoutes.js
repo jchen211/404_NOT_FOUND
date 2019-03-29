@@ -3,15 +3,15 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all times
   app.get("/api/times", function(req, res) {
-    db.Time.findAll({}).then(function(dbTimes) {
-      res.json(dbTimes);
+    db.Time.findAll({}).then(function(userTimes) {
+      res.json(userTimes);
     });
   });
 
   // Create a new time
   app.post("/api/times", function(req, res) {
-    db.Time.create(req.body).then(function(dbTimes) {
-      res.json(dbTimes);
+    db.Time.create(req.body).then(function(userTimes) {
+      res.json(userTimes);
     });
   });
 
@@ -21,8 +21,8 @@ module.exports = function(app) {
       where: {
         id: req.params.id
       }
-    }).then(function(dbTimes) {
-      res.json(dbTimes);
+    }).then(function(userTimes) {
+      res.json(userTimes);
     });
   });
 };
