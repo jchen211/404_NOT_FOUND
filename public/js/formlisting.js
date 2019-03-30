@@ -6,7 +6,7 @@ $(document).ready(function() {
   var propertyAddCity = $("#cityList");
   var propertyAddSate = $("#stateList");
   var propertyAddZIP = $("#zipList");
-  var propertyAmenities = $("#descriptionList");
+  // var propertyAmenities = $("#descriptionList");
   // Adding event listeners to the form to create a new object, and the button to delete
   // an user
   $(document).on("submit", "#listing-form", registerProperty);
@@ -23,7 +23,7 @@ $(document).ready(function() {
       propertyAddCity: propertyAddCity.val().trim(),
       propertyAddSate: propertyAddSate.val().trim(),
       propertyAddZIP: propertyAddZIP.val().trim()
-      propertyAmenities: propertyAddZIP.val().trim()
+      // propertyAmenities: propertyAddZIP.val().trim()
     });
 
     // empty each input box by replacing the value with an empty string

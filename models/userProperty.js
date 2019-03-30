@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
           allowNull: false
         }
       }),
-      Properties.hasMany(models.Time, {
+      Properties.hasMany(models.Times, {
         onDelete: "cascade"
       });
 

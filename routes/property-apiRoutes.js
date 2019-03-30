@@ -10,8 +10,9 @@ module.exports = function(app) {
 
   // Create a new property
   app.post("/api/property", function(req, res) {
-    db.Property.create(req.body).then(function(userProperty) {
-      res.json(userProperty);
+    console.log(req.body);
+    db.Properties.create(req.body).then(function(userProperty) {
+      // res.json(userProperty);
     });
   });
 
