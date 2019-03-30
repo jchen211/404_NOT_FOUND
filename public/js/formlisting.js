@@ -14,7 +14,6 @@ $(document).ready(function() {
   // A function to handle what happens when the form is submitted to create a new user
   function registerProperty(event) {
     event.preventDefault();
-    console.log("here");
 
     // Calling the newProperty function and passing in the value of the name input
     newProperty({
@@ -39,6 +38,5 @@ $(document).ready(function() {
   // A function for creating an user. Calls getusers upon completion
   function newProperty(userProperty) {
     $.post("/api/property", userProperty);
-    console.log("Property posted");
   }
 });

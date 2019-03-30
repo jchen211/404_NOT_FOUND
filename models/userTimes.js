@@ -1,5 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Times = sequelize.define("Times", {
+    // timeMonth: DataTypes.INTEGER,
+    // timeDay: DataTypes.INTEGER,
     timeStarting: DataTypes.INTEGER,
     timeEnding: DataTypes.INTEGER
   });
