@@ -1,18 +1,18 @@
 module.exports = function(sequelize, DataTypes) {
-  var Time = sequelize.define("Time", {
+  var Times = sequelize.define("Times", {
     timeStarting: DataTypes.INTEGER,
     timeEnding: DataTypes.INTEGER
   });
 
-  Time.associate = function(models) {
+  Times.associate = function(models) {
     // We're saying that a Time should belong to a Property
     // A Time can't be created without a Property due to the foreign key constraint
-    Time.belongsTo(models.Property, {
+    Times.belongsTo(models.Properties, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return Time;
+  return Times;
 };
