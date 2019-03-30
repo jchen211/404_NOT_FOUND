@@ -12,6 +12,7 @@ $(document).ready(function() {
   // A function to handle what happens when the form is submitted to create a new user
   function registerUser(event) {
     event.preventDefault();
+    console.log("here");
     // Don't do anything if the name fields hasn't been filled out
     if (
       !userName

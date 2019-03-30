@@ -36,10 +36,10 @@
     <div id="loginForm">
       <form>
         <label for="email"><b>Eamil Address</b></label>
-        <input type="text" class="form" placeholder="Enter Email" id="email" required>
+        <input type="text" class="form" placeholder="Enter Email" id="login-email" required>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" class="form" placeholder="Enter Password" id="psw" required>
+        <input type="password" class="form" placeholder="Enter Password" id="login-psw" required>
       </form>
       <br><button id="loginButton" type="button">Login</button>
       Not a member?
@@ -61,7 +61,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body" id="user-form">
+            <form class="modal-body" id="user-form">
               <label for="uname"><b>Username</b></label>
               <input type="text" class="form" placeholder="Enter Username" id="uname" required>
 
@@ -76,12 +76,12 @@
 
               <label for="cc"><b>Credit Card</b></label>
               <input type="text" class="form" placeholder="Enter Credit Card #" id="cc" required>
-
-            </div>
-            <div class="modal-footer">
+            
+            <div class="modal-footer"  >
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               <button type="submit">Register</button>
             </div>
+            </form>
           </div>
         </div>
       </div>
@@ -100,9 +100,6 @@
   </div>
   <script src="js/users.js" type="text/javascript"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-  </script>
 
 </body>
 
