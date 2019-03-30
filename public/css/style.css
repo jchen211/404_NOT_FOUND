@@ -1,7 +1,6 @@
 body {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 18px;
-    line-height: 25px;
+    line-height: -1px;
     color: #595d60;
     background-color: rgb(223, 155, 66);
     margin: 0px;
@@ -17,6 +16,9 @@ body {
     padding: 50px 25px;
     background-color: white;
     overflow:auto;
+}
+h1,h2,h3.h4,h5.h6{
+  margin: -3px;
 }
 
 #masterhead{
@@ -112,10 +114,23 @@ button {
 }
 #howHost{
   text-align: center;
+  clear: both;
  
 }
 .listingSteps{
   float:left;
   width: 47%;
   padding: 10px;
+}
+
+/*Forms Listing Search */
+.resultsDiv{
+  border: 1px solid rgb(223, 155, 66);
+  padding: 25px;
+  overflow: auto;
+  margin: 10px 0px;
+}
+.resultsInfo{
+  float: left;
+  width: 50%;
 }
