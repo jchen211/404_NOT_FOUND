@@ -24,6 +24,13 @@ $(document).ready(function() {
       propertyAddSate: propertyAddSate.val().trim(),
       propertyAddZIP: propertyAddZIP.val().trim()
     });
+
+    // empty each input box by replacing the value with an empty string
+    $("propertyType").val("");
+    $("propertyAddStreet").val("");
+    $("propertyAddCity").val("");
+    $("propertyAddState").val("");
+    $("propertyAddZip").val("");
   }
 
   // A function for creating an user. Calls getusers upon completion
