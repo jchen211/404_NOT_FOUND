@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all users
   app.get("/api/users/all", function(req, res) {
-    db.User.findAll({}).then(function(userInfo) {
+    db.Users.findAll({}).then(function(userInfo) {
       res.json(userInfo);
     });
   });
@@ -11,19 +11,19 @@ module.exports = function(app) {
   // Create a new user
   app.post("/api/users", function(req, res) {
     console.log(req.body);
-    db.User.create(req.body).then(function(userInfo) {
+    db.Users.create(req.body).then(function(userInfo) {
       // res.json(userInfo);
     });
   });
 
   //     var newUser = req.body;
 
-  //     User.create({
-  //       userName: newUser.userName,
-  //       userPassword: newUser.userPassword,
-  //       userPhone: newUser.userPhone,
-  //       userEmail: newUser.userEmail,
-  //       userCC: newUser.userCC,
+  //     Users.create({
+  //       userName: newUsers.userName,
+  //       userPassword: newUsers.userPassword,
+  //       userPhone: newUsers.userPhone,
+  //       userEmail: newUsers.userEmail,
+  //       userCC: newUsers.userCC,
   //     });
   //     res.status(204).end();
   //   });
