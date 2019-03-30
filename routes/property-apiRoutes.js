@@ -12,7 +12,7 @@ module.exports = function(app) {
   app.post("/api/property", function(req, res) {
     console.log(req.body);
     db.Properties.create(req.body).then(function(userProperty) {
-      // res.json(userProperty);
+      res.json(userProperty);
     });
   });
 
