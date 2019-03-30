@@ -1,5 +1,6 @@
 var db = require("../models");
 
+
 module.exports = function(app) {
   // Get all time
   app.get("/api/time", function(req, res) {
