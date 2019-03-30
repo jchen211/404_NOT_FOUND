@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Property = sequelize.define("Property", {
+  var Properties = sequelize.define("Properties", {
     propertyType: DataTypes.STRING,
     // propertyAddNum: DataTypes.INTEGER,
     propertyAddStreet: DataTypes.STRING,
@@ -9,10 +9,10 @@ module.exports = function(sequelize, DataTypes) {
     propertyAmenities: DataTypes.TEXT
   });
 
-  Property.associate = function(models) {
+  Properties.associate = function(models) {
     // We're saying that a Property should belong to an User
     // A Property can't be created without an User due to the foreign key constraint
-    Property.belongsTo(models.User, {
+    Properties.belongsTo(models.Users, {
       foreignKey: {
         allowNull: true
         // allowNull: false
@@ -23,5 +23,5 @@ module.exports = function(sequelize, DataTypes) {
     });
   };
 
-  return Property;
+  return Properties;
 };

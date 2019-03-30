@@ -60,11 +60,9 @@ $(document).ready(function() {
       url: "/api/property/" + id
     })
       .then(function() {
-        getresults(postCategorySelect.val());
+        // getresults(postCategorySelect.val());
       });
   }
-
-
 
     // update reserve from reserved to free
     function cancelReserve() {
