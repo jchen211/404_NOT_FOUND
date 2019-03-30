@@ -10,19 +10,19 @@ module.exports = function(app) {
 
   // Create a new time
   app.post("/api/time", function(req, res) {
-    db.Time.create(req.body).then(function(userTime) {
+    db.Time.create(req.body.selectpicker).then(function(userTime) {
       res.json(userTime);
     });
   });
 
   //delete a time
-  app.delete("/api/time/:id", function(req, res) {
-    db.Time.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(userTime) {
-      res.json(userTime);
-    });
-  });
+  // app.delete("/api/time/:id", function(req, res) {
+  //   db.Time.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(userTime) {
+  //     res.json(userTime);
+  //   });
+  // });
 };
