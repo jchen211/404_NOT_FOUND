@@ -34,6 +34,5 @@ $(document).ready(function() {
   // A function for creating an user. Calls getusers upon completion
   function newUser(userInfo) {
     $.post("/api/users", userInfo);
-    // console.log("Registered");
   }
 });

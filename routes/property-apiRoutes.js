@@ -29,13 +29,13 @@ module.exports = function(app) {
   // });
 
   //deletes a property
-  app.delete("/api/property/:id", function(req, res) {
-    db.Property.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function(userProperty) {
-      res.json(userProperty);
-    });
-  });
+  //   app.delete("/api/property/:id", function(req, res) {
+  //     db.Property.destroy({
+  //       where: {
+  //         id: req.params.id
+  //       }
+  //     }).then(function(userProperty) {
+  //       res.json(userProperty);
+  //     });
+  //   });
 };

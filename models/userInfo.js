@@ -1,4 +1,4 @@
-module.exports = function (sequelize, DataTypes) {
+module.exports = function(sequelize, DataTypes) {
   var User = sequelize.define("User", {
     // Data will be pulled in from DOM
     userName: DataTypes.STRING,
@@ -8,7 +8,7 @@ module.exports = function (sequelize, DataTypes) {
     userCC: DataTypes.INTEGER
   });
 
-  User.associate = function (models) {
+  User.associate = function(models) {
     // Associating user with Propertys
     // When an user is deleted, also delete any associated Propertys
     User.hasMany(models.Property, {

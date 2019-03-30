@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // Getting references to the name input and user container, as well as the table body
   var propertyType = $("#studioTypeList");
-  var propertyAddNum = $("#streetAddressList");
+  // var propertyAddNum = $("#streetAddressNum");
   var propertyAddStreet = $("#streetAddressList");
   var propertyAddCity = $("#cityList");
   var propertyAddSate = $("#stateList");
@@ -14,10 +14,11 @@ $(document).ready(function() {
   function registerProperty(event) {
     event.preventDefault();
     console.log("here");
+
     // Calling the newProperty function and passing in the value of the name input
     newProperty({
       propertyType: propertyType.val().trim(),
-      propertyAddNum: propertyAddNum.val().trim(),
+      // propertyAddNum: propertyAddNum.val().trim(),
       propertyAddStreet: propertyAddStreet.val().trim(),
       propertyAddCity: propertyAddCity.val().trim(),
       propertyAddSate: propertyAddSate.val().trim(),
@@ -28,5 +29,6 @@ $(document).ready(function() {
   // A function for creating an user. Calls getusers upon completion
   function newProperty(userProperty) {
     $.post("/api/property", userProperty);
+    console.log("Property posted");
   }
 });

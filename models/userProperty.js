@@ -1,11 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
   var Property = sequelize.define("Property", {
     propertyType: DataTypes.STRING,
-    propertyAddNum: DataTypes.INTEGER,
+    // propertyAddNum: DataTypes.INTEGER,
     propertyAddStreet: DataTypes.STRING,
     propertyAddCity: DataTypes.STRING,
     propertyAddSate: DataTypes.STRING,
-    propertyAddZIP: DataTypes.INTEGER,
+    propertyAddZIP: DataTypes.INTEGER
   });
 
   Property.associate = function(models) {
@@ -13,11 +13,12 @@ module.exports = function(sequelize, DataTypes) {
     // A Property can't be created without an User due to the foreign key constraint
     Property.belongsTo(models.User, {
       foreignKey: {
-        allowNull: false
+        allowNull: true
+        // allowNull: false
       }
-    }),
-    Property.hasMany(models.Time, {
-      onDelete: "cascade"
+      // }),
+      // Property.hasMany(models.Time, {
+      //   onDelete: "cascade"
     });
   };
 

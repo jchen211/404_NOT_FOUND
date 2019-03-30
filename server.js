@@ -1,9 +1,7 @@
 require("dotenv").config();
 var express = require("express");
 // var exphbs = require("express-handlebars");
-var {
-  DateTime
-} = require("luxon");
+var {DateTime} = require("luxon");
 DateTime.local();
 var db = require("./models");
 
