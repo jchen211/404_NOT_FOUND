@@ -5,7 +5,8 @@ module.exports = function(sequelize, DataTypes) {
     propertyAddStreet: DataTypes.STRING,
     propertyAddCity: DataTypes.STRING,
     propertyAddSate: DataTypes.STRING,
-    propertyAddZIP: DataTypes.INTEGER
+    propertyAddZIP: DataTypes.INTEGER,
+    propertyAmenities: DataTypes.TEXT
   });
 
   Property.associate = function(models) {
