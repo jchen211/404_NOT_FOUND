@@ -1,26 +1,29 @@
-module.exports = function (sequelize, DataTypes) {
-  var Property = sequelize.define("Property", {
+
+module.exports = function(sequelize, DataTypes) {
+  var Properties = sequelize.define("Properties", {
     propertyType: DataTypes.STRING,
     // propertyAddNum: DataTypes.INTEGER,
     propertyAddStreet: DataTypes.STRING,
     propertyAddCity: DataTypes.STRING,
     propertyAddSate: DataTypes.STRING,
-    propertyAddZIP: DataTypes.INTEGER
+    propertyAddZIP: DataTypes.INTEGER,
+    propertyAmenities: DataTypes.TEXT
   });
 
-  Property.associate = function (models) {
+  Properties.associate = function (models) {
     // We're saying that a Property should belong to an User
     // A Property can't be created without an User due to the foreign key constraint
-    Property.belongsTo(models.User, {
+    Properties.belongsTo(models.Users, {
         foreignKey: {
           // allowNull: true
           allowNull: false
         }
       }),
-      Property.hasMany(models.Time, {
+      Properties.hasMany(models.Time, {
         onDelete: "cascade"
       });
+
   };
 
-  return Property;
+  return Properties;
 };

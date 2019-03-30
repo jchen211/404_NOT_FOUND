@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var User = sequelize.define("User", {
+  var Users = sequelize.define("Users", {
     // Data will be pulled in from DOM
     userName: DataTypes.STRING,
     userPassword: DataTypes.STRING,
@@ -8,13 +8,13 @@ module.exports = function(sequelize, DataTypes) {
     userCC: DataTypes.INTEGER
   });
 
-  User.associate = function(models) {
+  Users.associate = function(models) {
     // Associating user with Propertys
     // When an user is deleted, also delete any associated Propertys
-    User.hasMany(models.Property, {
+    Users.hasMany(models.Properties, {
       onDelete: "cascade"
     });
   };
 
-  return User;
+  return Users;
 };
