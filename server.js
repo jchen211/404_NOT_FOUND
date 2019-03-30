@@ -26,7 +26,7 @@ app.use(express.static(__dirname + "/public"));
 
 // Routes
 require("./routes/user-apiRoutes")(app);
-require("./routes/times-apiRoutes")(app);
+require("./routes/time-apiRoutes")(app);
 require("./routes/property-apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
