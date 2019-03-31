@@ -40,5 +40,13 @@ $(document).ready(function() {
   // A function for creating an user. Calls getusers upon completion
   function newUser(userInfo) {
     $.post("/api/users", userInfo);
+
+    // resets form and closes modal
+    $("#user-form").each(function() {
+      this.reset();
+    })
+
+    $(".modal").modal("hide");
   }
+
 });
