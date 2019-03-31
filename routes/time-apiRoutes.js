@@ -11,7 +11,8 @@ module.exports = function(app) {
 
   // Create a new time
   app.post("/api/time", function(req, res) {
-    db.Times.create(req.body.selectpicker).then(function(userTime) {
+    console.log(req.body);
+    db.Times.create(req.body).then(function(userTime) {
       res.json(userTime);
     });
   });
