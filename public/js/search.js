@@ -43,7 +43,12 @@ $(document).ready(function () {
 
   var listingContainer = $("#cardContainer");
 
+  // handle the reserveBtn
+  $(document).on("click", "button.reserve", reserveListing);
+
+
   var listings;
+
   getProperty();
 
   function getProperty() {
@@ -53,6 +58,10 @@ $(document).ready(function () {
 
       for (var i = 0; i < listings.length; i++) {
         console.log(listings[i]);
+
+        //adding a timestamp
+        // var formattedDate = new Date(data.createdAt);
+        // formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
 
         var newCard = $("<div>");
         newCard.addClass("card");
@@ -92,99 +101,14 @@ $(document).ready(function () {
         listingContainer.append(newCard);
       }
     });
-
   }
-  // function initializeProps() {
-  //   listingContainer.empty();
-  //   var postsToAdd = [];
-  //   for (var j = 0; j < listings.length; j++) {
-  //     console.log(listings[j]);
-  //     postsToAdd.push(createResultCard(listings));
-  //   }
-  //   listingContainer.append(postsToAdd);
-  // }
 
-  
-  
-  // Function for creating a new list Card for property
-    function createResultCard(listings) {
-    console.log("Inside Loop " + listings.propertyType+listings.propertyAddCity+listings.propertyAddStreet+listings.propertyAddZIP);
-      console.log(listings);
-    // var newCard =
-    // $("#resultsCard").html("<div value=" + data.id + "><strong>Studio Address: </strong>"+ data.propertyAddStreet + "<br><br><button type='button' class='bookButton' data-toggle='modal' data-target='#exampleModalCenter'>Book Studio!</button></div>");
-    // newCard;
-    // newCard.append("<div value=" + i + ">" + data.propertyType + "</div>");
-    // newCard.append("<div value=" + i + ">" + data.propertyType + "</div>");
-    // return newCard;
-    var formattedDate = new Date(data.createdAt);
-    formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
+  function reserveListing() {
+    $(".modal").modal("show");
+    cancelReservation();
+  } 
 
-    var newCard = $("<div>");
-    newCard.addClass("card");
-
-    var newCardHeading = $("<div>");
-    newCardHeading.addClass("card-header");
-
-    var reserveBtn = $("<button>");
-    reserveBtn.text("Reserve");
-    reserveBtn.addClass("reserve btn btn-info");
-
-    var newTitle = $("<h2>");
-    var newDate = $("<small>");
-
-    var newCardProp = $("<h5>");
-    newCardProp.text("Written by: " + listings.propertyType);
-    
-    var newCardBody = $("<div>");
-    newCardBody.addClass("card-body");
-    var newBody = $("<p>");
-    newTitle.text(data.propertyType + " ");
-    newBody.text(data.propertyAddStreet);
-    newDate.text(formattedDate);
- 
-    newTitle.append(newDate);
-
-    newCardHeading.append(reserveBtn);
-    newCardHeading.append(newTitle);
-    newCardHeading.append(newCardProp);
-
-    newCardBody.append(newBody);
-
-    newCard.append(newCardHeading);
-    newCard.append(newCardBody);
-    newCard.data("data", data);
-
-    return newCard;
+  function cancelReservation() {
+    $("button.reserve").text("cancel");
   }
-  
-  // Function for retrieving properties and getting them ready to be rendered to the page
-  // function searchResults() {
-  //   $.get("/api/property", function(data) {
-  //     var Properties={data};
-  //     var CardsToAdd = [];
-  //     for (var i = 0; i < data.length; i++) {
-  //       var fID = Properties.data[i].id;
-  //       CardsToAdd.push(data[i].propertyAddStreet);
-  //       createResultCard(CardsToAdd[i],fID);
-  // }
-  // renderPropertyList(CardsToAdd);
-  // nameInput.val("");
-  // });
-  // }
-
-  // // A function for creating an user. Calls getusers upon completion
-  // function searchProp(searchInfo) {
-  //   // console.log(searchInfo);
-  //   $.get("/api/property/:id", searchInfo, function (res) {
-  //     var data = {};
-  //     for (var i = 0; i < res.length; i++) {
-  //       console.log(res[i]);
-  //       // CardsToAdd.push(res[i]);
-  //       // console.log(CardsToAdd);
-  //       data = res[i];
-  //       createResultCard(data);
-  //       // document.write(createResultCard(data));
-  //     }
-  //   })
-  // }
 });
