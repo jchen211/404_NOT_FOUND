@@ -15,7 +15,7 @@ $(document).ready(function() {
 // making a timedate var
 var timeStarting = new Date(Date.UTC(2019,timeMonth.val(), timeDay.val(), starting.val()));
 var timeEnding = new Date(Date.UTC(2019,timeMonth.val(), timeDay.val(), ending.val()));
-console.log("StudioID: "+studio);
+console.log("StudioID: "+studio.val());
 console.log("Start: "+timeStarting);
 console.log("Ending: "+timeEnding);
 // Calling the newTime function and passing in the value of the name input
@@ -50,9 +50,9 @@ console.log("Ending: "+timeEnding);
       var Properties={data};
       var optionsToAdd = [];
       for (var i = 0; i < data.length; i++) {
-        // console.log(Properties.data[i].propertyAddStreet);
+        var fID = Properties.data[i].id;
         optionsToAdd.push(data[i].propertyAddStreet);
-        createPropertyOption(optionsToAdd[i],i);
+        createPropertyOption(optionsToAdd[i],fID);
       }
       // renderPropertyList(optionsToAdd);
       // nameInput.val("");
