@@ -9,6 +9,21 @@ module.exports = function(app) {
     });
   });
 
+  // Searches for properties by type
+    app.get("/api/property/:id", function(req, res) {
+      // console.log(req.query.propertyType);
+
+      db.Properties.findAll({
+        where: {
+          propertyType: req.query.propertyType
+        }
+      }).then(function(results) {
+        res.json(results);
+              // console.log(results);
+
+      });
+    });
+
   // Create a new properties
   app.post("/api/property", function(req, res) {
     console.log(req.body);
