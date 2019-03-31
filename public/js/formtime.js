@@ -15,12 +15,16 @@ $(document).ready(function() {
 // making a timedate var
 var timeStarting = new Date(Date.UTC(2019,timeMonth.val(), timeDay.val(), starting.val()));
 var timeEnding = new Date(Date.UTC(2019,timeMonth.val(), timeDay.val(), ending.val()));
+console.log("StudioID: "+studio);
 console.log("Start: "+timeStarting);
 console.log("Ending: "+timeEnding);
 // Calling the newTime function and passing in the value of the name input
     newTime({
-      timeStarting: timeStarting.toISOString(),
-      timeEnding: timeEnding.toISOString()
+      timeStarting: timeStarting
+      // .toISOString()
+      ,
+      timeEnding: timeEnding
+      // .toISOString()
     });
   }
 
@@ -29,4 +33,52 @@ console.log("Ending: "+timeEnding);
     $.post("/api/time", userTime);
     console.log("Time posted");
   }
+
+  // Function for creating a new list Option for property
+  function createPropertyOption(propertyData,i) {
+    // console.log("Inside Loop "+propertyData);
+
+    var newOption = $("#studioList");
+    newOption.data(propertyData);
+    newOption.append("<option value="+i+">" + propertyData + "</option>");
+    return newOption;
+  }
+
+  // Function for retrieving properties and getting them ready to be rendered to the page
+  function getProperties() {
+    $.get("/api/property", function(data) {
+      var Properties={data};
+      var optionsToAdd = [];
+      for (var i = 0; i < data.length; i++) {
+        // console.log(Properties.data[i].propertyAddStreet);
+        optionsToAdd.push(data[i].propertyAddStreet);
+        createPropertyOption(optionsToAdd[i],i);
+      }
+      // renderPropertyList(optionsToAdd);
+      // nameInput.val("");
+    });
+  }
+
+  // A function for rendering the list of properties to the page
+  function renderpropertyList(options) {
+    propertyList.children().not(":last").remove();
+    propertyContainer.children(".alert").remove();
+    if (options.length) {
+      console.log(options);
+      propertyList.prepend(options);
+    }
+    else {
+      renderEmpty();
+    }
+  }
+
+  // Function for handling what to render when there are no properties
+  function renderEmpty() {
+    var alertDiv = $("<div>");
+    alertDiv.addClass("alert alert-danger");
+    alertDiv.text("You must create an property before you can create a Post.");
+    propertyContainer.append(alertDiv);
+  }
+
+getProperties()
 });
