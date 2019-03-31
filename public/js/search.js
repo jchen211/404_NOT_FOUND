@@ -49,9 +49,7 @@ $(document).ready(function () {
 
   var listings;
 
-  getProperty();
-
-  function getProperty() {
+// gets all property listings
     $.get("/api/property", function(data) {
       listings = data;
       console.log(listings);
@@ -101,7 +99,7 @@ $(document).ready(function () {
         listingContainer.append(newCard);
       }
     });
-  }
+
 
   function reserveListing() {
     $(".modal").modal("show");
