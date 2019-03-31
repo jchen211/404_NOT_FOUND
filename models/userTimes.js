@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
   var Times = sequelize.define("Times", {
-    timeStarting: DataTypes.DATE,
-    timeEnding: DataTypes.DATE
+    timeStarting: DataTypes.STRING,
+    timeEnding: DataTypes.STRING
   });
 
   Times.associate = function(models) {

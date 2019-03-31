@@ -1,42 +1,43 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all property
-  app.get("/api/property/all", function(req, res) {
-    db.Property.findAll({}).then(function(userProperty) {
-      res.json(userProperty);
+  // Get all properties
+  app.get("/api/property", function(req, res) {
+    db.Properties.findAll({}).then(function(userProperties) {
+      res.json(userProperties);
+      // console.log(userProperties);
     });
   });
 
-  // Create a new property
+  // Create a new properties
   app.post("/api/property", function(req, res) {
     console.log(req.body);
-    db.Properties.create(req.body).then(function(userProperty) {
-      res.json(userProperty);
+    db.Properties.create(req.body).then(function(userProperties) {
+      res.json(userProperties);
     });
   });
 
-  //   var newProperty = req.body;
+  //   var newProperties = req.body;
 
-  //   Property.create({
-  //     propertyType: newProperty.propertyType,
-  //     propertyAddNum: newProperty.propertyAddNum,
-  //     propertyAddStreet: newProperty.propertyAddStreet,
-  //     propertyAddCity: newProperty.propertyAddCity,
-  //     propertyAddSate: newProperty.propertyAddSate,
-  //     propertyAddZIP: newProperty.propertyAddZIP
+  //   Properties.create({
+  //     propertiesType: newProperties.propertiesType,
+  //     propertiesAddNum: newProperties.propertiesAddNum,
+  //     propertiesAddStreet: newProperties.propertiesAddStreet,
+  //     propertiesAddCity: newProperties.propertiesAddCity,
+  //     propertiesAddSate: newProperties.propertiesAddSate,
+  //     propertiesAddZIP: newProperties.propertiesAddZIP
   //   });
   //   res.status(204).end();
   // });
 
-  //deletes a property
-  //   app.delete("/api/property/:id", function(req, res) {
-  //     db.Property.destroy({
+  //deletes a properties
+  //   app.delete("/api/properties/:id", function(req, res) {
+  //     db.Properties.destroy({
   //       where: {
   //         id: req.params.id
   //       }
-  //     }).then(function(userProperty) {
-  //       res.json(userProperty);
+  //     }).then(function(userProperties) {
+  //       res.json(userProperties);
   //     });
   //   });
 };
