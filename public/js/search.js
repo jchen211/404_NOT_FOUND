@@ -45,9 +45,9 @@ $(document).ready(function () {
   function createResultCard(data) {
     console.log("Inside Loop " + data.id+data.propertyType+data.propertyAddCity+data.propertyAddStreet+data.propertyAddZIP);
 
-    var newCard = $("#resultsCard");
-    newCard.data(data);
-    newCard.append("<div value=" + data.id + "><strong>Studio Address: </strong>"+ data.propertyAddStreet + "<br><br><button type='button' class='bookButton' data-toggle='modal' data-target='#exampleModalCenter'>Book Studio!</button></div>");
+    // var newCard =
+    $("#resultsCard").html("<div value=" + data.id + "><strong>Studio Address: </strong>"+ data.propertyAddStreet + "<br><br><button type='button' class='bookButton' data-toggle='modal' data-target='#exampleModalCenter'>Book Studio!</button></div>");
+    // newCard;
     // newCard.append("<div value=" + i + ">" + data.propertyType + "</div>");
     // newCard.append("<div value=" + i + ">" + data.propertyType + "</div>");
     return newCard;
@@ -82,6 +82,7 @@ $(document).ready(function () {
         // console.log(CardsToAdd);
         data = res[i];
         createResultCard(data);
+        // document.write(createResultCard(data));
       }
     })
   }
