@@ -27,14 +27,12 @@ module.exports = function(app) {
 
   // Create a new properties
   app.post("/api/property", function(req, res) {
-    console.log(req.body);
     db.Properties.create(req.body).then(function(userProperties) {
       res.json(userProperties);
     });
   });
 
   app.put("/api/property/:id", function(req, res) {
-    console.log(req.body);
     db.Properties.update(
       {propertyTaken: true},
       { propertyID: req.body.id})
