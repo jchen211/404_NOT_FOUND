@@ -15,7 +15,8 @@ module.exports = function(app) {
 
       db.Properties.findAll({
         where: {
-          propertyType: req.query.propertyType
+          propertyType: req.query.propertyType,
+          propertyTaken: false
         }
       }).then(function(results) {
         res.json(results);
@@ -28,6 +29,16 @@ module.exports = function(app) {
   app.post("/api/property", function(req, res) {
     console.log(req.body);
     db.Properties.create(req.body).then(function(userProperties) {
+      res.json(userProperties);
+    });
+  });
+
+  app.put("/api/property/:id", function(req, res) {
+    console.log(req.body);
+    db.Properties.update(
+      {propertyTaken: true},
+      { propertyID: req.body.id})
+    .then(function(userProperties) {
       res.json(userProperties);
     });
   });
