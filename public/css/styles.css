@@ -7,26 +7,21 @@ body {
   color: #747575;
   margin: 0px;
   box-sizing: border-box;
-  /* display: flex; */
   height: 100%;
 }
-
 
 .container {
   width: 100%;
   min-height: 100%;
   max-width: 960px;
-  margin: auto;
+  margin: 0 auto;
   clear: both;
   padding: 50px 25px;
-  /* background-color: white; */
-  overflow:auto;
   flex: 1
 }
 
 #masterhead{
   color: rgb(223, 155, 66);
-  position: fixed;
   top: 0;
   left:0;
   width: 100%;
@@ -38,18 +33,20 @@ body {
 
 .navContainer{
   width: 960px;
-  margin:auto;
+  margin: 10px auto;
 }
 
 #logo{
+  color: rgb(223, 155, 66);
   float:left;
-  border: 2px solid rgb(223, 155, 66);
-  margin: 5px;
-  padding:3px;
+  border: 7px solid rgb(223, 155, 66);
+  margin: 10px 20px;
+  padding:10px 40px;
+  font-weight: bold;
 }
 
 #navitems{
-  padding:12px;
+  padding:20px;
   float: right;
 }
 
@@ -57,7 +54,7 @@ body {
   text-decoration: underline;
 }
 
-h1,h2,h3.h4,h5,h6{
+h1,h2,h3,h4,h5,h6{
   color: #595d60;
 }
 
@@ -69,7 +66,7 @@ a {
 a:hover {
   color: rgb(223, 155, 66);
   font-weight: 200;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
 }
 
 button {
@@ -84,10 +81,11 @@ button {
   margin: 10px 2px;
   cursor: pointer;
   border-radius: 16px;
+  outline: none;
 }
 
 .form{
-  border: 1px solid rgb(223, 155, 66);
+  border: 2px solid rgb(223, 155, 66);
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -106,13 +104,15 @@ button {
   box-sizing: border-box;
 }
 
+#loginForm, .searchContainer {
+  border: solid 4px #DF9B42;
+  padding: 50px;
+}
 
-
-#listingForm{
+#listingForm {
   align-content: center;
   box-sizing: border-box;
 }
-
 
 
 select{
@@ -187,11 +187,22 @@ select{
   font-size: 26px;
   font-weight: bold;
   letter-spacing: 3px;
-  border: solid 4px white;
+  border: solid 4px #FFFFFF;
   border-radius: 0%;
-  
+  background-color: transparent;
+  outline: none;
 }
 
+#introWrapper {
+  position: absolute;
+  left:50%;
+  right: 15%;
+  top: 10%;
+  width: 35%;
+  opacity: 0;
+  transform: translateX(200px);
+
+}
 
 @media only screen and (max-width: 980px) {
   .navContainer{

@@ -14,24 +14,21 @@
 </head>
 
 <body>
+    <div id="masterhead">
+        <div class="navContainer">
+        <div>
+            <a href="index.html" id="logo">CREATE HERE</a>
+        </div>
+        <div id="navitems">
+            <a href="search.html">Search a Studio</a> |
+            <a href="formlisting.html">List your Space</a> |
+            <a href="login.html">Login</a>
+        </div>
+        </div>
+    </div>
 
     <div class="container">
-        <div id="masterhead">
-            <div class="navContainer">
-                <div>
-                    <h4 id="logo">Create Here</h4>
-                </div>
-
-                <div id="navitems">
-                    <a href="index.html">Home</a> |
-                    <a href="search.html">Search a Studio</a> |
-                    <a href="formlisting.html">List your Space</a> |
-                    <a href="login.html">Login</a>
-                </div>
-
-            </div>
-        </div>
-
+      <div class="searchContainer">  
         <h1>Creativity Starts Here</h1>
         Find a studio in your area that fits all of your creative needs.
         <form id="search-form">
@@ -42,10 +39,7 @@
                 <option value="welding">Welding</option>
             </select>
 
-
-
             <input type="text" id="citySearch" class="formSmall" placeholder="City">
-
 
             <select id="stateSearch" class="formSmall">
                 <option>State</option>
@@ -185,13 +179,12 @@
                             <button type="button" data-dismiss="modal">Close</button>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
+
     <script src="js/search.js" type="text/javascript"></script>
 
 </body>
-
 </html>

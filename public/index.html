@@ -24,28 +24,9 @@
         <polygon class="polymorph" points="1920,0 345.36,0 0,0 0,1080 1920,1080"/>
     </svg>
    
-    <!-- <div id="masterhead">
-
-        <div class="navContainer">
-            <div>
-                <h4 id="logo">Create Here</h4>
-            </div>
-
-            <div id="navitems">
-                <a href="index.html">Home</a> |
-                <a href="search.html">Search a Studio</a> |
-                <a href="formlisting.html">List your Space</a> |
-                <a href="login.html">Login</a>
-            </div>
-        </div>
-    </div> -->
-
-
-
-    <!-- <div class="container"> -->
         <div id="introWrapper">
-            <h1>Create Here</h1>
-
+            <h1 id="logo">CREATE HERE</h1>
+            <br>
             <p>Create here helps you work on all your creative projects in fully equipped studios in the Chicagoland
                 Area. Our studio selection has everything necessary to get the job done right no matter what size
                 project you decide to take on. Some of our most popular studios available are photography, art, and
@@ -56,10 +37,9 @@
                 having to worry about storing and maintaining expensive equipment. Not to mention the cost of owning a
                 workspace itself!</p>
             <br>
-            <button onclick="location.href = 'login.html';">Login</button>
+            <button onclick="location.href = 'login.html';">Get Started</button>
         </div>
     </div>
-    <!-- </div> -->
 
     <script src="/js/users.js" type="text/javascript"></script>
     <script src="/js/anime.min.js"></script>
@@ -74,9 +54,16 @@
             { value: "536,758 0,0 0,0 0,1080 1920,1080 " }
             ],
         easing: 'easeOutQuad',
-        duration: 2000,
+        duration: 1000,
         loop: false
         });
+
+        anime({
+            targets: "#introWrapper",
+            opacity: 1,
+            duration: 2500,
+            translateX: -100
+        })
     })
 
 
