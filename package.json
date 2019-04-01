@@ -1,0 +1,24 @@
+{
+  "name": "404_not_found",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "luxon": "^1.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jchen211/404_NOT_FOUND.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jchen211/404_NOT_FOUND/issues"
+  },
+  "homepage": "https://github.com/jchen211/404_NOT_FOUND#readme"
+}
