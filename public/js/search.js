@@ -21,6 +21,11 @@ $(document).ready(function () {
       propertyType: propertyType.val()
     });
   }
+  // A function to update the propertyTaken to true
+  function updateDB(data) {
+    console.log(data);
+    $.put("/api/property/:id", data, function (res) {console.log(res);});
+  }
   // A function for creating an user. Calls getusers upon completion
   function searchProp(searchInfo) {
     console.log(searchInfo);
@@ -34,6 +39,7 @@ $(document).ready(function () {
 
         var newCard = $("<div>");
         newCard.addClass("card");
+        newCard.val(res[i].id);
 
         var newCardHeading = $("<div>");
         newCardHeading.addClass("card-header");
@@ -65,6 +71,7 @@ $(document).ready(function () {
         var reserveBtn = $("<button>");
         reserveBtn.addClass("reserve btn btn-info");
         reserveBtn.text("Reserve Now");
+        reserveBtn.val(res[i].id);
         newCard.append(reserveBtn);
 
         listingContainer.prepend(newCard);
@@ -133,12 +140,17 @@ $(document).ready(function () {
   // });
 
 
-  function reserveListing() {
+  function reserveListing(event) {
+    var pID = $(this).val();
+    console.log(pID);
     $(".modal").modal("show");
-    cancelReservation();
+    cancelReservation(pID);
   }
 
-  function cancelReservation() {
+  function cancelReservation(data) {
+    updateDB({
+      propertyID: data
+    });
     $("button.reserve").text("cancel");
   }
 });
