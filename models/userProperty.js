@@ -7,6 +7,7 @@ module.exports = function(sequelize, DataTypes) {
     propertyAddCity: DataTypes.STRING,
     propertyAddSate: DataTypes.STRING,
     propertyAddZIP: DataTypes.INTEGER,
+    propertyTaken: DataTypes.BOOLEAN,
     propertyAmenities: DataTypes.TEXT
   });
 
