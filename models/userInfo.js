@@ -15,11 +15,8 @@ module.exports = function(sequelize, DataTypes) {
     },
     userPhone: { 
       type: DataTypes.BIGINT,
-      allowNull: false,
+      allowNull: false
 
-      validate: {
-        max: 10
-      }
     },
     userEmail: {
       type: DataTypes.STRING,

@@ -3,7 +3,6 @@ module.exports = function(sequelize, DataTypes) {
   var Properties = sequelize.define("Properties", {
     propertyType: {
       type: DataTypes.STRING,
-      allowNull: false
     },
     propertyAddStreet: { 
       type: DataTypes.STRING,
@@ -21,10 +20,9 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.INTEGER,
       allowNull: false
     },
-    propertyTaken: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
-    },
+    // propertyTaken: {
+    //   type: DataTypes.BOOLEAN,
+    // },
     propertyAmenities: {
       type: DataTypes.TEXT,
       allowNull: false

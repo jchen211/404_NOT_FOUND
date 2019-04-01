@@ -8,11 +8,14 @@ $(document).ready(function() {
   // Adding event listeners to the form to create a new object, and the button to delete
   // an user
   $(document).on("submit", "#user-form", registerUser);
+  
+  //atmpt to login
+  // $(document).on("submit", "#loggingIn", loginUser);
+
 
   // A function to handle what happens when the form is submitted to create a new user
   function registerUser(event) {
     event.preventDefault();
-    console.log("here");
     // Don't do anything if the name fields hasn't been filled out
     if (
       !userName
@@ -30,7 +33,7 @@ $(document).ready(function() {
       userEmail: userEmail.val().trim(),
       userCC: userCC.val().trim()
     });
-  }
+  } 
 
   // A function for creating an user. Calls getusers upon completion
   function newUser(userInfo) {
@@ -43,5 +46,20 @@ $(document).ready(function() {
 
     $(".modal").modal("hide");
   }
+
+// atmpt login ==========================
+// var eMail = $("#login-email");
+// var psw = $("#ogin-psw");
+  // function loginUser() {
+    // $.get("/login", function(userInfo){ 
+    //   if (userInfo === eMail && psw) {
+    //     res.redirect("./search"); 
+    //   } else {
+    //     req.flash("Incorrect email or password")
+    //   }
+    // })
+  // }
+// ======================================
+
 
 });

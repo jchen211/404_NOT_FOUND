@@ -38,5 +38,8 @@ $(document).ready(function() {
   // A function for creating an user. Calls getusers upon completion
   function newProperty(userProperty) {
     $.post("/api/property", userProperty);
+    $("#listing-form").each(function() {
+      this.reset();
+    })
   }
 });

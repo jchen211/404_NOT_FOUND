@@ -19,18 +19,13 @@
       <div>
         <a href="index.html" id="logo">CREATE HERE</a>
       </div>
-      <div id="navitems">
-        <a href="search.html">Search a Studio</a> |
-        <a href="formlisting.html">List your Space</a> |
-        <a href="login.html">Login</a>
-      </div>
     </div>
   </div>
 
 
   <div class="container">
     <div id="loginForm">
-      <form>
+      <form id="loggingIn">
         <h2>LOG IN</h2>
         <label for="email"><b>Email Address</b></label>
         <input type="text" class="form" placeholder="Enter Email" id="login-email" required>
@@ -39,7 +34,7 @@
         <input type="password" class="form" placeholder="Enter Password" id="login-psw" required>
       </form>
       
-      <br><button id="loginButton" type="button">Login</button>
+      <br><button onclick="location.href='search.html' " id="loginButton" type="submit">Login</button>
     
       <!-- Button trigger modal -->
       <button type="button" data-toggle="modal" data-target="#exampleModalCenter">Register</button>
@@ -61,7 +56,7 @@
 
               <label for="psw"><b>Password</b></label>
               <input type="password" class="form" placeholder="Enter Password" id="psw" required>
-
+              <p>Must be at least 5 characters</p>
               <label for="phone"><b>Phone Number</b></label>
               <input type="text" class="form" placeholder="Enter Phone Number" id="phone" required>
 
