@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false 
     },
     userCC: { 
-      type: DataTypes.INTEGER
+      type: DataTypes.BIGINT
       // checks for credit card (demo purposes uses dummy CC/none)
       // validate: {
       //   isCreditCard :true

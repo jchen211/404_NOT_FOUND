@@ -10,6 +10,7 @@ module.exports = function(app) {
 
   // Create a new user
   app.post("/api/users", function(req, res) {
+    // console.log(req.body);
     db.Users.create({
         userName: req.body.userName,
         userPassword: req.body.userPassword,
