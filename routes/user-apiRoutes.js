@@ -10,22 +10,19 @@ module.exports = function(app) {
 
   // Create a new user
   app.post("/api/users", function(req, res) {
-    console.log(req.body);
-    db.Users.create(req.body).then(function(userInfo) {
-      // res.json(userInfo);
-    });
+    db.Users.create({
+        userName: req.body.userName,
+        userPassword: req.body.userPassword,
+        userPhone: req.body.userPhone,
+        userEmail: req.body.userEmail,
+        userCC: req.body.userCC
+    })
+      .then(function(userInfo) {
+        res.json(userInfo);
+    })
+    .catch(function(err) {
+      // Whenever a validation or flag fails, an error is thrown
+        res.json(err);
+      });
   });
-
-  //     var newUser = req.body;
-
-  //     Users.create({
-  //       userName: newUsers.userName,
-  //       userPassword: newUsers.userPassword,
-  //       userPhone: newUsers.userPhone,
-  //       userEmail: newUsers.userEmail,
-  //       userCC: newUsers.userCC,
-  //     });
-  //     res.status(204).end();
-  //   });
-  // });
 };

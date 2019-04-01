@@ -30,11 +30,6 @@ $(document).ready(function() {
       userEmail: userEmail.val().trim(),
       userCC: userCC.val().trim()
     });
-
-    $("userPassword").val("");
-    $("userPhone").val("");
-    $("userEmail").val("");
-    $("userCC").val("");
   }
 
   // A function for creating an user. Calls getusers upon completion
