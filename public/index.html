@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create Here</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/stylesheet" href="/css/styles.css">
+
+</head>
+
+<body>
+
+    <div class="btnWrapper">
+        <button id="create">CREATE HERE</button>
+        <p style="color: #FFFFFF">THI IS WHERE CREATIVITY HAPPENS</p>
+    </div>
+    
+    <svg viewBox="0 0 1920 1080" height="100%">
+        <polygon class="polymorph" points="1920,0 345.36,0 0,0 0,1080 1920,1080"/>
+    </svg>
+   
+        <div id="introWrapper">
+            <h1 id="logo">CREATE HERE</h1>
+            <br>
+            <p>Create here helps you work on all your creative projects in fully equipped studios in the Chicagoland
+                Area. Our studio selection has everything necessary to get the job done right no matter what size
+                project you decide to take on. Some of our most popular studios available are photography, art, and
+                welding. We offer competitive prices which makes creating your projects much more affordable.</p>
+            <h4>Renting a Studio vs Owning a Studio</h4>
+            <p>Booking a studio has major advantages. You have the ability to work on any of your desired projects
+                without
+                having to worry about storing and maintaining expensive equipment. Not to mention the cost of owning a
+                workspace itself!</p>
+            <br>
+            <button onclick="location.href = 'login.html';">Get Started</button>
+        </div>
+    </div>
+
+    <script src="/js/users.js" type="text/javascript"></script>
+    <script src="/js/anime.min.js"></script>
+
+    <script>
+    
+    $("#create").click(function() {
+        var morphing =  anime({
+        targets: ".polymorph",
+        points: [
+            { value: "536,758 345.36,0 0,0 0,1080 1920,1080 " },
+            { value: "536,758 0,0 0,0 0,1080 1920,1080 " }
+            ],
+        easing: 'easeOutQuad',
+        duration: 1000,
+        loop: false
+        });
+
+        anime({
+            targets: "#introWrapper",
+            opacity: 1,
+            duration: 2500,
+            translateX: -100
+        })
+    })
+
+
+    </script>
+</body>
+
+</html>
