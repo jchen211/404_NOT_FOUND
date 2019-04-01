@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "root",
-    "password": "lavii677914744",
-    "database": "hdnkq3sjie33avyb",
-    "host": "127.0.0.1",
+    "username": "process.env.MYSQL_USER",
+    "password": "process.env.MYSQL_KEY",
+    "database": "process.env.MYSQL_DBNAME",
+    "host": "process.env.MYSQL_HOST",
     "port": 3306,
     "dialect": "mysql"
   },
@@ -16,11 +16,7 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": "password",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "port": 3306,
-    "dialect": "mysql"
+    "use_env_variable": "JAWSDB_URL",
+    "dialet": "mysql"
   }
 }
