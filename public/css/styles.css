@@ -96,15 +96,15 @@ button {
 
 .formSmall{
   border: 1px solid rgb(223, 155, 66);
-  width: 32%;
-  padding: 12px 20px;
+  width: 31%;
+  padding: 8px 20px;
   margin: 8px 4px;
   display: inline-block;
   border-radius: 4px;
   box-sizing: border-box;
 }
 
-#loginForm, .searchContainer {
+#loginForm, .searchContainer, .listContainer, .timeContainer {
   border: solid 4px #DF9B42;
   padding: 50px;
 }
@@ -120,11 +120,9 @@ select{
 }
 
 #startList,#endList, #endSearch, #startSearch{
-  width: 47%;
+  width: 46%;
   margin: 8px 8px;
 }
-
-
 
 #whyHost{
   text-align: center;
