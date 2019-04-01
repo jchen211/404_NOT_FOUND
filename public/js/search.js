@@ -11,27 +11,29 @@ $(document).ready(function () {
   // Adding event listeners to the form to create a new object, and the button to delete
   // an user
   $(document).on("submit", "#search-form", searchDB);
+  
+  var listingContainer = $("#cardContainer");
 
   // A function to handle what happens when the form is submitted to create a new user
   function searchDB(event) {
     event.preventDefault();
-    console.log(propertyType.val());
+    // console.log(propertyType.val());
     // Calling the searchDB function and passing in the value of the name input
     searchProp({
       propertyType: propertyType.val()
     });
   }
   // A function to update the propertyTaken to true
-  function updateDB(data) {
-    console.log(data);
-    $.put("/api/property/:id", data, function (res) {console.log(res);});
-  }
+  // function updateDB(data) {
+  //   console.log(data);
+  //   $.put("/api/property/:id", data, function (res) {console.log(res);});
+  // }
   // A function for creating an user. Calls getusers upon completion
   function searchProp(searchInfo) {
-    console.log(searchInfo);
+    // console.log(searchInfo);
     $.get("/api/property/:id", searchInfo, function (res) {
-      console.log(res);
-      var data = {};
+      // console.log(res);
+      // var data = {};
       for (var i = 0; i < res.length; i++) {
         console.log(res[i]);
         // CardsToAdd.push(res[i]);
@@ -68,8 +70,13 @@ $(document).ready(function () {
         newCity.text(res[i].propertyAddCity + ", " + res[i].propertyAddZIP);
         cardBody.append(newCity);
 
+        var newAmenities = $("<p>");
+        newAmenities.addClass("propInfo");
+        newAmenities.text("Description: " + res[i].propertyAmenities);
+        cardBody.append(newAmenities);
+
         var reserveBtn = $("<button>");
-        reserveBtn.addClass("reserve btn btn-info");
+        reserveBtn.addClass("reserve");
         reserveBtn.text("Reserve Now");
         reserveBtn.val(res[i].id);
         newCard.append(reserveBtn);
@@ -80,7 +87,6 @@ $(document).ready(function () {
     })
   };
 
-  var listingContainer = $("#cardContainer");
 
   // handle the reserveBtn
   $(document).on("click", "button.reserve", reserveListing);
