@@ -15,18 +15,15 @@ module.exports = function(sequelize, DataTypes) {
     },
     userPhone: { 
       type: DataTypes.BIGINT,
-      allowNull: false,
+      allowNull: false
 
-      validate: {
-        max: 10
-      }
     },
     userEmail: {
       type: DataTypes.STRING,
       allowNull: false 
     },
     userCC: { 
-      type: DataTypes.INTEGER
+      type: DataTypes.BIGINT
       // checks for credit card (demo purposes uses dummy CC/none)
       // validate: {
       //   isCreditCard :true
