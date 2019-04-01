@@ -2,7 +2,12 @@
 var path = require("path");
 
 module.exports = function(app) {
-  // Load index page
+
+    // Load index page
+    app.get("/", function(req, res) {
+      res.sendFile(path.join(__dirname, "../public/index.html"));
+    });
+  // Load login page
   app.get("/login", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
