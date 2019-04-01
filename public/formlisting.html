@@ -32,99 +32,99 @@
         <div class="listContainer">
             <h1>List a Space!</h1>
             <p>Earn money as a studio host</p>
-            <div id="listingForm">
-                <form id="listing-form">
-                    <select id="studioTypeList" class="form" name="Studio">
-                        <option>Type of Studio</option>
-                        <option value="art">Art</option>
-                        <option value="photography">Photography</option>
-                        <option value="welding">Welding</option>
-                    </select>
+          <div id="listingForm">
+            <form id="listing-form">
+                <select id="studioTypeList" class="form" name="Studio">
+                    <option>Type of Studio</option>
+                    <option value="art">Art</option>
+                    <option value="photography">Photography</option>
+                    <option value="welding">Welding</option>
+                </select>
 
-                    <br>
+                <br>
 
-                    <input type="text" id="streetAddressList" class="form" placeholder="Street Address">
-                    <br>
-                    <input type="text" id="cityList" class="formSmall" placeholder="City">
+                <input type="text" id="streetAddressList" class="form" placeholder="Street Address">
+                <br>
+                <input type="text" id="cityList" class="formSmall" placeholder="City">
 
 
-                    <select id="stateList" class="formSmall">
-                        <option>State</option>
-                        <option>AL</option>
-                        <option>AK</option>
-                        <option>AZ</option>
-                        <option>AR</option>
-                        <option>CA</option>
-                        <option>CO</option>
-                        <option>CT</option>
-                        <option>DE</option>
-                        <option>FL</option>
-                        <option>GA</option>
-                        <option>HI</option>
-                        <option>ID</option>
-                        <option>IL</option>
-                        <option>IN</option>
-                        <option>IA</option>
-                        <option>KS</option>
-                        <option>KY</option>
-                        <option>LA</option>
-                        <option>ME</option>
-                        <option>MD</option>
-                        <option>MA</option>
-                        <option>MI</option>
-                        <option>MN</option>
-                        <option>MS</option>
-                        <option>MO</option>
-                        <option>MT</option>
-                        <option>NE</option>
-                        <option>NV</option>
-                        <option>NH</option>
-                        <option>NJ</option>
-                        <option>NM</option>
-                        <option>NY</option>
-                        <option>NC</option>
-                        <option>ND</option>
-                        <option>OH</option>
-                        <option>OK</option>
-                        <option>OR</option>
-                        <option>PA</option>
-                        <option>RI</option>
-                        <option>SC</option>
-                        <option>SD</option>
-                        <option>TN</option>
-                        <option>TX</option>
-                        <option>UT</option>
-                        <option>VT</option>
-                        <option>VA</option>
-                        <option>WA</option>
-                        <option>WV</option>
-                        <option>WI</option>
-                        <option>WY</option>
-                    </select>
+                <select id="stateList" class="formSmall">
+                    <option>State</option>
+                    <option>AL</option>
+                    <option>AK</option>
+                    <option>AZ</option>
+                    <option>AR</option>
+                    <option>CA</option>
+                    <option>CO</option>
+                    <option>CT</option>
+                    <option>DE</option>
+                    <option>FL</option>
+                    <option>GA</option>
+                    <option>HI</option>
+                    <option>ID</option>
+                    <option>IL</option>
+                    <option>IN</option>
+                    <option>IA</option>
+                    <option>KS</option>
+                    <option>KY</option>
+                    <option>LA</option>
+                    <option>ME</option>
+                    <option>MD</option>
+                    <option>MA</option>
+                    <option>MI</option>
+                    <option>MN</option>
+                    <option>MS</option>
+                    <option>MO</option>
+                    <option>MT</option>
+                    <option>NE</option>
+                    <option>NV</option>
+                    <option>NH</option>
+                    <option>NJ</option>
+                    <option>NM</option>
+                    <option>NY</option>
+                    <option>NC</option>
+                    <option>ND</option>
+                    <option>OH</option>
+                    <option>OK</option>
+                    <option>OR</option>
+                    <option>PA</option>
+                    <option>RI</option>
+                    <option>SC</option>
+                    <option>SD</option>
+                    <option>TN</option>
+                    <option>TX</option>
+                    <option>UT</option>
+                    <option>VT</option>
+                    <option>VA</option>
+                    <option>WA</option>
+                    <option>WV</option>
+                    <option>WI</option>
+                    <option>WY</option>
+                </select>
 
-                    <input type="text" id="zipList" class="formSmall" placeholder="Zip Code">
-                    <br>
+                <input type="text" id="zipList" class="formSmall" placeholder="Zip Code">
+                <br>
 
-                    <textarea type="text" id="descriptionList" class="form" name="equiptment"
-                        placeholder="Please provide a detailed description of of your space here. Be sure to list your equiptment and amenities your studio has to offer."></textarea>
+                <textarea type="text" id="descriptionList" class="form" name="equiptment"
+                    placeholder="Please provide a detailed description of of your space here. Be sure to list your equiptment and amenities your studio has to offer."></textarea>
 
-                    <button type="submit" data-toggle="modal" data-target="#exampleModalCenter">List your space</button>
-            </div>
-            </form>
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
-                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Your Studio has been listed!</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <button onclick="location.href = 'formtime.html';">Register available times for your
-                                studio!</button>
+                <button type="submit" data-toggle="modal" data-target="#exampleModalCenter">List your space</button>
+          </div>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Your Studio has been listed!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- <button onclick="location.href = 'formtime.html';">Register available times for your studio!</button> -->
+                                <p>You will be notified when a user wants to use your space!</p>
+                            </div>
                         </div>
                     </div>
                 </div>
