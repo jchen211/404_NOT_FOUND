@@ -11,9 +11,6 @@ body {
   height: 100%;
 }
 
-.polymorph {
-  fill: #DF9B42;
-}
 
 .container {
   width: 100%;
@@ -172,6 +169,29 @@ select{
   bottom: 10px;
   right:20px;
 }
+
+
+.polymorph {
+  fill: #DF9B42;
+}
+
+
+.btnWrapper {
+  position: absolute;
+  margin: 300px 600px;
+  width: 400px;
+
+}
+
+#create {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  border: solid 4px white;
+  border-radius: 0%;
+  
+}
+
 
 @media only screen and (max-width: 980px) {
   .navContainer{
