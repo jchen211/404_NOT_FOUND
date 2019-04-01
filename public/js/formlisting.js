@@ -18,7 +18,6 @@ $(document).ready(function() {
     // Calling the newProperty function and passing in the value of the name input
     newProperty({
       propertyType: propertyType.val().trim(),
-      // propertyAddNum: propertyAddNum.val().trim(),
       propertyAddStreet: propertyAddStreet.val().trim(),
       propertyAddCity: propertyAddCity.val().trim(),
       propertyAddSate: propertyAddSate.val().trim(),
